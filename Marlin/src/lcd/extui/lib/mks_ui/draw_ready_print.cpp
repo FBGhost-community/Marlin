@@ -247,7 +247,7 @@ void lv_draw_ready_print() {
         lv_obj_align(labelBed, buttonBedstate, LV_ALIGN_CENTER, 0, 60);
       #endif
 
-      sprintf_P(buf, PSTR("%d%"), (int)thermalManager.fan_speed[0]);
+      sprintf_P(buf, PSTR("%d%"), thermalManager.fanPercent(thermalManager.fan_speed[0]));
       lv_label_set_text(labelFan, buf);
       lv_obj_align(labelFan, buttonFanstate, LV_ALIGN_CENTER, 0, 60);
       
